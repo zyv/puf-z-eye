@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PuF Z-Eye</title>
+    <link rel="stylesheet" href="index.css" />
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <form>
+      <h1>PuF Z-Eye</h1>
+
+      <p id="hint" class="hint"></p>
+
+      <p><strong>Derzeit blockierte Autoren:</strong></p>
+
+      <div id="blocked-users"></div>
+
+      <div class="buttons">
+        <button type="button" id="remove-authors">Beiträge ausgewählter Autoren freigeben</button>
+      </div>
+
+      <label>
+        <input type="text" name="author-name" placeholder="Autorname" />
+        <button type="button" id="add-author">Hinzufügen</button>
+      </label>
+
+      <label>
+        <input type="checkbox" id="hide-answers" />
+        <span>Auch Antworten an diese Autoren ausblenden</span>
+      </label>
+
+      <div class="buttons">
+        <button type="button" id="register-dynamic" disabled>Anschalten</button>
+        <button type="button" id="unregister-dynamic" disabled> Ausschalten</button>
+      </div>
+    </form>
+  </body>
+</html>

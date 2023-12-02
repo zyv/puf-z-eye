@@ -1,0 +1,25 @@
+{
+  "name": "puf-z-eye",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/zyv/puf-z-eye",
+  "repository": "github:zyv/puf-z-eye.gmbh",
+  "scripts": {
+    "prettier": "prettier --write \"./**/*.{js,json,html,md}\" && prettier --write --parser json \"./.prettierrc\"",
+    "prettier-check": "prettier --check \"./**/*.{js,json,html,md}\" && prettier --check --parser json \"./.prettierrc\"",
+    "lint": "eslint \"**/*.{js,html}\"",
+    "package": "cd src && zip -r -FS ../puf-z-eye.zip *"
+  },
+  "author": "Yury V. Zaytsev",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "*",
+    "eslint-config-prettier": "*",
+    "eslint-config-standard": "*",
+    "eslint-plugin-html": "*",
+    "eslint-plugin-import": "*",
+    "eslint-plugin-n": "*",
+    "eslint-plugin-promise": "*",
+    "prettier": "*"
+  }
+}

@@ -1,0 +1,46 @@
+form {
+    display: inline-block;
+    border: 1px solid #dadce0;
+    min-width: 350px;
+}
+
+h1 {
+    background: #f6f9fe;
+    margin: 0;
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+}
+
+label {
+    margin: 20px;
+    display: flex;
+}
+
+label span {
+    margin-top: 3px;
+}
+
+p {
+    margin-left: 20px;
+}
+
+.hint {
+    margin: 20px;
+    background: #f6f6f6;
+    padding: 7px 12px;
+    display: none;
+}
+
+.buttons {
+    display: flex;
+    margin: 20px;
+}
+
+.buttons button {
+    margin-right: 15px;
+}
+
+input {
+    margin-right: 7px;
+}
