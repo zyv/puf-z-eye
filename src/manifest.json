@@ -1,7 +1,7 @@
 {
   "name": "PuF Z-Eye",
   "author": "Yury V. Zaytsev",
-  "version": "1.0",
+  "version": "1.1",
   "manifest_version": 3,
   "description": "Hide posts from specific authors from conversations on the leading German aviation forum 'Pilot und Flugzeug'.",
   "icons": {
