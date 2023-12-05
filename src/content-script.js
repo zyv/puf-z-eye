@@ -1,4 +1,4 @@
-chrome.storage.sync.get(['authors', 'hideAnswers']).then(result => {
+chrome.storage.sync.get(['authors', 'hideAnswers', 'hideHeaders']).then(result => {
   for (const author of result.authors || []) {
     const postsFromAuthor = document.querySelectorAll('.messageHeader b > a')
     const postsToAuthor = [...document.querySelectorAll('.messageHeader :not(b) > a')]
@@ -15,6 +15,9 @@ chrome.storage.sync.get(['authors', 'hideAnswers']).then(result => {
       const buttons = messages.nextElementSibling
       elementsToRemove.add(messages)
       elementsToRemove.add(buttons)
+      if (result.hideHeaders) {
+        elementsToRemove.add(heading)
+      }
     }
 
     elementsToRemove.forEach(element => element.remove())

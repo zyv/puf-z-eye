@@ -69,9 +69,18 @@ document.querySelector('#hide-answers').addEventListener('change', async () => {
   })
 })
 
+document.querySelector('#hide-headers').addEventListener('change', async () => {
+  const hideHeaders = document.querySelector('#hide-headers').checked
+  chrome.storage.sync.set({ hideHeaders }).then(() => {
+    showHint('Gespeichert!')
+    updateUI()
+  })
+})
+
 function updateUI() {
-  chrome.storage.sync.get(['authors', 'hideAnswers']).then(result => {
+  chrome.storage.sync.get(['authors', 'hideAnswers', 'hideHeaders']).then(result => {
     document.querySelector('#hide-answers').checked = !!result.hideAnswers
+    document.querySelector('#hide-headers').checked = !!result.hideHeaders
     document.getElementById('blocked-users').replaceChildren(
       ...(result.authors || []).map(author => {
         const label = document.createElement('label')
