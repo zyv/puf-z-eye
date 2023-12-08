@@ -1,7 +1,7 @@
 {
   "name": "PuF Z-Eye",
   "author": "Yury V. Zaytsev",
-  "version": "1.2",
+  "version": "1.3",
   "manifest_version": 3,
   "description": "Hide posts from specific authors from conversations on the leading German aviation forum 'Pilot und Flugzeug'.",
   "icons": {
@@ -10,8 +10,15 @@
     "128": "icons/puf-z-eye-128.png"
   },
   "permissions": ["scripting", "storage"],
-  "host_permissions": ["https://www.pilotundflugzeug.de/forum/*"],
   "action": {
     "default_popup": "index.html"
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.pilotundflugzeug.de/forum/*"],
+      "js": ["content-script.js"],
+      "runAt": "document_end"
+    }
+  ],
+  "background": { "service_worker": "background.js" }
 }

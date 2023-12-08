@@ -9,7 +9,18 @@ h1 {
     margin: 0;
     padding: 15px;
     font-size: 20px;
-    text-align: center;
+    text-align: left;
+}
+
+#hint {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+  background: #f6f6f6;
+  padding: 7px 12px;
+  display: none;
+  color: brown;
 }
 
 label {
@@ -19,17 +30,11 @@ label {
 
 label span {
     margin-top: 3px;
+    margin-right: 7px;
 }
 
 p {
     margin-left: 20px;
-}
-
-.hint {
-    margin: 20px;
-    background: #f6f6f6;
-    padding: 7px 12px;
-    display: none;
 }
 
 .buttons {
@@ -43,4 +48,8 @@ p {
 
 input {
     margin-right: 7px;
+}
+
+.bounds {
+  justify-content: space-between;
 }

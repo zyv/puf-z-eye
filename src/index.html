@@ -12,7 +12,7 @@
     <form>
       <h1>PuF Z-Eye</h1>
 
-      <p id="hint" class="hint"></p>
+      <p id="hint"></p>
 
       <p><strong>Derzeit blockierte Autoren:</strong></p>
 
@@ -23,7 +23,7 @@
       </div>
 
       <label>
-        <input type="text" name="author-name" placeholder="Autorname" />
+        <input type="text" id="author-name" placeholder="Autorname" />
         <button type="button" id="add-author">Hinzufügen</button>
       </label>
 
@@ -37,9 +37,23 @@
         <span>Post-Kopfzeilen ausblenden</span>
       </label>
 
+      <p><strong>Nach Bewertung ausblenden:</strong></p>
+
+      <label class="bounds">
+        <span>Schlechter als</span>
+        <input type="text" id="rating-lower-bound" placeholder="-2" />
+      </label>
+
+      <label class="bounds">
+        <span>Besser als</span>
+        <input type="text" id="rating-upper-bound" placeholder="+3" />
+      </label>
+
+      <p>Anwenden: Zahl eingeben/leeren und <b>⏎</b> drücken!</p>
+
       <div class="buttons">
-        <button type="button" id="register-dynamic" disabled>Anschalten</button>
-        <button type="button" id="unregister-dynamic" disabled> Ausschalten</button>
+        <button type="button" id="activate-script" disabled>Aktivieren</button>
+        <button type="button" id="deactivate-script" disabled>Deaktivieren</button>
       </div>
     </form>
   </body>
