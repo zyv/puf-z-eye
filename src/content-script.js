@@ -40,13 +40,15 @@ chrome.storage.sync.get(['authors', 'hideAnswers', 'hideHeaders', 'active', 'upp
     let message = header.nextElementSibling
 
     // Also hide attachment carousel if it was captured instead of buttons
-    while (message.querySelector("font[class='messageText']") !== null) {
+    while (message !== null && message.querySelector("font[class='messageText']") !== null) {
       elementsToRemove.add(message)
       message = message.nextElementSibling
     }
 
     // Remove rating buttons
-    elementsToRemove.add(message)
+    if (message !== null) {
+      elementsToRemove.add(message)
+    }
 
     if (result.hideHeaders) {
       elementsToRemove.add(header)
